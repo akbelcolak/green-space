@@ -1,37 +1,86 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://localhost:3001/ -->
+<!-- saved from url=(0022)http://localhost:3000/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
     <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
     <title>React App</title>
-<style>form div.field label {
-    font-weight: bold;
+  <style type="text/css">.FruitContainer {
+    font-size: 40px;
+    cursor: pointer;
+    display: block;
+    transition: transform 10s ease;
 }
 
-form .error {
-    color: red;
-}</style><style>.app section.app_goal {
+.RotatingContainer {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: rotate;
+}
+
+@keyframes rotate {
+    0%, 100% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.BouncingContainer {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: bounce;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}</style><style type="text/css">.app section.app_goal {
     margin: 10px;
     padding: 10px;
     border: 1px solid black;
 }
 
 </style></head>
-<body data-gr-c-s-loaded="true">
-<noscript>You need to enable JavaScript to run this app.</noscript>
-<div id="root"><section class="app"><h1>React - Week 2</h1><section class="app_goal"><h2>State Hooks</h2><h3>Exercise 1</h3><div><p>Hello 世界</p><button>Translation please</button></div><h3>Exercise 2</h3><div><p>Hello 世界</p><button>Translation please</button></div><h3>Exercise 3</h3><div><p>Hello 世界</p><button>Translation please</button></div><h3>Exercise 4</h3><div><p>Hello 世界</p><button>Translation to english please</button></div><h3>Exercise 5</h3><div><p>0</p><button>Click me!</button></div><h3>Exercise 6</h3><div><p>0</p><button>Click me!</button></div><h3>Exercise 7</h3><div><p>0</p><button>click me</button></div><h3>Exercise 8</h3><div><p>I like </p><button>fruit</button><button>meat</button><button>vegetables</button></div><h3>Exercise 9</h3><div><p>Last click: </p><button>UPPER</button><button>LOWER</button></div><h3>Exercise 10</h3><div><ul><li>docker</li><li>kubernetes</li></ul><button>Add element</button></div><h3>Exercise 11</h3><div><ul></ul><button>Add element</button></div><h3>Exercise 12</h3><div><ul></ul><button>Add element</button></div><h3>Exercise 13</h3><div><ul></ul><button>Add element</button><button>Remove element</button></div><h3>Exercise 14</h3><div><ul></ul><button>Add element</button><button>Remove element</button></div></section><section class="app_goal"><h2>Forms</h2><h3>Contact Form</h3><section class="contact"><form><div class="field"><label for="comment">Your question or comment</label> <br><textarea id="comment" name="comment"></textarea></div><div class="field"><label for="email">Name</label> <br><input id="name" type="text" name="name" aria-label="contact-name"></div><button type="submit">Send it!</button></form></section><h3>Math Form</h3><section class="contact"><form><div class="field"><input id="name" type="number" name="numberA" aria-label="math-number-a">&nbsp; + &nbsp;<input id="name" type="number" name="numberA" aria-label="math-number-b"></div></form><p>The sum of a and b is 0</p></section><h3>Fruit Form</h3><section class="contact"><form><div class="field"><label for="email">Banana or Apple</label> <br><input id="name" type="text" name="name" aria-label="fruit-name"></div><p class="error">I don't recognize this fruit please make a choice between "banana" or "apple"</p><button type="submit">Add</button></form><ul></ul></section></section></section></div>
-<!--
-  This HTML file is a template.
-  If you open it directly in the browser, you will see an empty page.
+  <body data-gr-c-s-loaded="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><section class="app"><h1>React - Week 3</h1><section class="app_goal"><h2>Child-Parent and Parent-Child Communication</h2><h3>Interactive Fruits</h3><section><table><tbody></tbody></table><button>Generate</button><button>Bounce</button><button>Rotate</button></section><h3>Fruit App</h3><section class="fruit"><section class="contact"><form><div class="field"><label for="email">Banana or Apple + bonus Orange</label> <br><input id="name" type="text" name="name" aria-label="fruit-name"></div><button type="submit">Add</button></form></section><ul></ul></section><h3>Fruit App With Balance Indicator</h3><section class="fruit"><section class="contact"><form><div class="field"><label for="email">Banana or Apple + bonus Orange</label> <br><input id="name" type="text" name="name" aria-label="fruit-name"></div><button type="submit">Add</button></form></section><ul><li><span data-testid="fruit">🍑</span></li><li><span data-testid="fruit">🍑</span></li><li><span data-testid="fruit">🍑</span></li><li><span data-testid="fruit">🍊</span></li></ul><p>Eat more bananas</p></section><h3>Fruits and Vegetables</h3><div><p>Produces:<label><input type="radio" name="produce" checked=""> fruits</label><label><input type="radio" name="produce"> vegetables</label></p><label>Produce: <input value="apple"></label></div></section><section class="app_goal"><div class="pokedex"><h2>Pokedex</h2></div><div class="pokedex"><h2>Interactive Pokedex</h2></div></section></section></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-  You can add webfonts, meta tags, or analytics to this file.
-  The build step will place the bundled scripts into the <body> tag.
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-  To begin the development, run `npm start` or `yarn start`.
-  To create a production bundle, use `npm run build` or `yarn build`.
--->
-<script src="./React App_files/bundle.js"></script><script src="./React App_files/1.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.073c6a692564b632a3d5.hot-update.js"></script>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/0.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.8569f53c8c899de94a2e.hot-update.js"></script>
 
 </body></html>
